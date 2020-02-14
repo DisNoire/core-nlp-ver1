@@ -7,7 +7,7 @@ This project will read your sentence and create a class from it following the pa
 
 To run project:
 
-- 1)Download core-nlp-ver1.jar
+- 1)Download core-nlp-ver1.jar from https://drive.google.com/file/d/1P-cOK3_ceePdkhZ7vL7M1hSz_s8fO5Yc/view?usp=sharing
 - 2)Open terminal
 - 3)Direct terminal to core-nlp-ver1.jar location 
 - 4)Execute
