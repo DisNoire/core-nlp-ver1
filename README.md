@@ -12,4 +12,4 @@ To run project:
 - 3)Direct terminal to core-nlp-ver1.jar location 
 - 4)Execute
 
-         java -Xmx4096M -jar core-nlp-ver1.jar \*sentence you want to test out\*
+         java -Xmx4096M -jar core-nlp-ver1.jar "sentence you want to test out"
