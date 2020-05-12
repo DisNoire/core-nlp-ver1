@@ -4,11 +4,11 @@ import java.util.List;
 import java.util.Optional;
 
 public class SentenceWrapper {
-    private Sentence sentence;
-    private List<Optional<Integer>> governors;
-    private List<Optional<String>> dependecies;
-    private List<String> nerTags;
-    private List<String> posTags;
+    private volatile Sentence sentence;
+    private volatile List<Optional<Integer>> governors;
+    private volatile List<Optional<String>> dependecies;
+    private volatile List<String> nerTags;
+    private volatile List<String> posTags;
 
     public SentenceWrapper(Sentence sentence){
         this.sentence = sentence;

@@ -1,11 +1,11 @@
 import edu.stanford.nlp.simple.Sentence;
 
-public class NlpSentenceThreadHandler implements Runnable{
+public class NlpSentenceThread implements Runnable{
     private Thread t;
     private String threadName;
     private SentenceWrapper sentence;
 
-    NlpSentenceThreadHandler(String name, SentenceWrapper sentence) {
+    NlpSentenceThread(String name, SentenceWrapper sentence) {
         threadName = name;
         this.sentence = sentence;
         System.err.println("Creating " +  threadName );

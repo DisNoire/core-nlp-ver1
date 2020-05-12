@@ -8,10 +8,10 @@ public class JavassistHandler {
         pool.makeClass(className);
     }
 
-    public static void makeMethod(String className, String methodName){
+    public static void makeMethod(String className, String methodName, String methodParams){
         try {
             pool.get(className).addMethod(CtNewMethod.make("public void " +
-                    methodName + "(){}", pool.get(className)));
+                    methodName + "(" + methodParams + "){}", pool.get(className)));
         } catch (CannotCompileException | NotFoundException e) {
             e.printStackTrace();
         }
@@ -22,6 +22,14 @@ public class JavassistHandler {
             pool.get(className).addField(CtField.make("private String " + fieldName
                     + " = \"" + fieldValue + "\";", pool.get(className)));
         } catch (CannotCompileException | NotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void writeFile(String className){
+        try {
+            pool.get(className).writeFile();
+        }catch (Exception e){
             e.printStackTrace();
         }
     }

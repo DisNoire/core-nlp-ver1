@@ -11,8 +11,11 @@ Class that shows how SimpleNlp works
 public class CoreNlpSimpleExample {
 
     public static void main(String[] args){
-        Sentence sentence = new Sentence("Alex like drinking beer now"); //Little boat sailing through the sea
-        sentence.governor(0);
+        Sentence sentence = new Sentence("Alex like drinking beer now.");
+        //Little boat sailing through the sea
+        //Alex like drinking beer now.
+        //After John drank his coffee, he left the coffee shop.
+
         List<Optional<Integer>> governors = sentence.governors();
         List<Optional<String>> dependecies = sentence.incomingDependencyLabels();
         List<String> nerTags = sentence.nerTags();
@@ -30,6 +33,9 @@ public class CoreNlpSimpleExample {
             System.out.println(posTag);
         }
         System.out.println(sentence.dependencyGraph().toDotFormat());
+        System.out.println(sentence.dependencyGraph().toString());
+        System.out.println(sentence.dependencyGraph().toCompactString());
+        System.out.println(sentence.dependencyGraph().toFormattedString());
 
         Document document = new Document("");
         document.sentences();
